@@ -2,7 +2,7 @@ import { createClient } from "./supabase/server"
 import { decryptKey } from "./encryption"
 import { env } from "./openproviders/env"
 
-export type Provider = "openai" | "mistral" | "google" | "anthropic" | "xai"
+export type Provider = | "google" |
 
 export async function getUserKey(userId: string, provider: Provider): Promise<string | null> {
   try {
